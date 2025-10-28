@@ -1,0 +1,118 @@
+section.up {
+    width: 100%;
+    height: 100vh;
+}
+
+.intro-sec {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+.intro-sec-text {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    color: #fff;
+}
+
+.my-sec {
+    width: 100%;
+    background: #fff;
+}
+
+.my-sec-id-pic {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.my-sec-id-pic>img {
+    width: 40vw;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.my-sec-id-text p,
+.my-sec-id-text a {
+    font-size: 13vw;
+    font-weight: 900;
+    color: #000;
+    text-decoration: inherit;
+    cursor: default;
+}
+
+.my-sec-id-text a {
+    cursor: pointer;
+}
+
+.my-sec-id-pic {
+    position: relative;
+}
+
+.my-sec-id-skill {
+    width: 25%;
+    position: absolute;
+    bottom: 3vw;
+    right: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.my-sec-id-skill img {
+    height: 7vw;
+    filter: grayscale(100%) brightness(0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-120px);
+    will-change: transform, opacity;
+}
+
+.my-sec-id-skill img:hover {
+    filter: grayscale(0%) brightness(1);
+}
+
+.my-sec-id-button {
+    width: 10vw;
+    height: 3vw;
+    position: absolute;
+    right: 12vw;
+    bottom: 23vw;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.2s ease;
+}
+
+.my-sec-id-button:hover {
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .3);
+    background: #000;
+    color: #fff;
+}
+
+.my-sec-id-button a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}

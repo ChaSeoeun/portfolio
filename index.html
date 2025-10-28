@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <main id="portfolio-cont">
+        <section id="intro" class="intro-sec up">
+            <div class="intro-sec-text t1">믿고 맡길 수 있는</div>
+            <div class="intro-sec-text t2">꾸준히 성장하는</div>
+            <div class="intro-sec-text t3">트렌디에 맞게</div>
+            <div class="intro-sec-text t4">변화할 줄 아는</div>
+            <div class="intro-sec-text t5">WEB PUBLISHER</div>
+            <div class="intro-sec-text t6">차서은입니다</div>
+        </section>
+
+        <section id="my" class="my-sec up">
+            <div class="my-sec-id-pic">
+                <img src="img/id_picture.png" alt="">
+                <!-- <div class="my-sec-id-text">
+                    <p>1994.04.28</p>
+                    <p>CHA SEO EUN</p>
+                    <a href="tel:010.3337.6343">010.3337.6343</a>
+                </div> -->
+                <div class="my-sec-id-skill">
+                    <img class="skill1" src="img/skill_html.svg" alt="">
+                    <img class="skill2" src="img/skill_css.svg" alt="">
+                    <img class="skill3" src="img/skill_js.svg" alt="">
+                    <img class="skill4" src="img/skill_jquery.svg" alt="">
+                    <img class="skill5" src="img/skill_figma.svg" alt="">
+                </div>
+                <div class="my-sec-id-button">
+                    <a href="">SHOW MORE</a>
+                </div>
+            </div>
+
+            <div class="my-sec-id-pop">
+
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
+    <script>
+        // intro-sec 모션 주기
+        const introAni = gsap.timeline();
+        introAni.from("#intro .t2", { autoAlpha: 0, duration: 1, y: 50 }, "+=1")
+            .from("#intro .t3", { autoAlpha: 0, duration: 1, y: 50 }, "+=1")
+            .from("#intro .t4", { autoAlpha: 0, duration: 1, y: 50 }, "+=1")
+            .from("#intro .t5", { autoAlpha: 0, duration: 1, y: 50 }, "+=1")
+            .from("#intro .t6", { autoAlpha: 0, duration: 1, y: 50 }, "+=1")
+
+        ScrollTrigger.create({
+            animation: introAni,
+            trigger: "#intro",
+            start: "top top",
+            end: "+=5000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1
+        });
+
+        const skillAni = gsap.timeline({
+            defaults: { duration: 0.8, ease: "power2.out" }
+        });
+
+        skillAni.to("#my .my-sec-id-skill img", {
+            y: 0,
+            autoAlpha: 1,
+            stagger: 0.2
+        })
+
+            .to("#my .my-sec-id-button", {
+                autoAlpha: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out"
+            }, "+=0.1");
+
+        ScrollTrigger.create({
+            animation: skillAni,
+            trigger: "#my",
+            start: "top top",
+            end: "+=4000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1
+        });
+
+        // skill 아이콘 hover를 GSAP로 제어
+        document.querySelectorAll('#my .my-sec-id-skill img').forEach((el) => {
+            el.addEventListener('mouseenter', () => {
+                gsap.to(el, { scale: .8, duration: 0.2, overwrite: 'auto' });
+            });
+            el.addEventListener('mouseleave', () => {
+                gsap.to(el, { scale: 1, duration: 0.2, overwrite: 'auto' });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
