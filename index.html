@@ -16,8 +16,7 @@
         <section id="intro" class="intro-sec">
             <div class="intro-sec-text t1">믿고 맡길 수 있는</div>
             <div class="intro-sec-text t2">꾸준히 성장하는</div>
-            <div class="intro-sec-text t3">트렌디에 맞게</div>
-            <div class="intro-sec-text t4">변화할 줄 아는</div>
+            <div class="intro-sec-text t3">트렌디에 맞게 변화할 줄 아는</div>
             <div class="intro-sec-text t5">WEB PUBLISHER</div>
             <div class="intro-sec-text t6">차서은입니다</div>
         </section>
@@ -114,6 +113,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
+
     <script>
         // intro-sec 모션 주기
         const introAni = gsap.timeline();
@@ -127,7 +128,7 @@
             animation: introAni,
             trigger: "#intro",
             start: "top top",
-            end: "+=5000",
+            end: "+=2500",
             scrub: true,
             pin: true,
             anticipatePin: 1
@@ -155,7 +156,7 @@
             animation: skillAni,
             trigger: "#my",
             start: "top top",
-            end: "+=3000",
+            end: "+=2000",
             scrub: true,
             pin: true,
             anticipatePin: 1
