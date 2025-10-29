@@ -64,10 +64,13 @@ section.up {
 }
 
 .my-sec-id-skill {
-    width: 34%;
+    width: 25%;
     position: absolute;
-    bottom: 3vw;
-    right: 5vw;
+    /* bottom: 3vw;
+    right: 5vw; */
+    top: 50%;
+    left: 5vw;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,11 +116,16 @@ section.up {
 }
 
 .my-sec-id-button {
+    width: 20vw;
+    height: 5vw;
     opacity: 0;
     transform: translateY(50px);
     position: absolute;
-    right: 12vw;
-    bottom: 23vw;
+    right: 5vw;
+    /* bottom: 23vw; */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2vw;
 }
 
 .my-sec-id-pop {

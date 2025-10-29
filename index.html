@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
+<body onselectstart="return false" ondragstart="return false" oncontextmenu="return false">
     <main id="portfolio-cont">
         <section id="intro" class="intro-sec up">
             <div class="intro-sec-text t1">믿고 맡길 수 있는</div>
@@ -31,9 +31,9 @@
                     <a href="tel:010.3337.6343">010.3337.6343</a>
                 </div> -->
                 <div class="my-sec-id-skill">
-                    <img class="skill1" src="img/skill_js.svg" alt="">
+                    <img class="skill1" src="img/skill_html.svg" alt="">
                     <img class="skill2" src="img/skill_css.svg" alt="">
-                    <img class="skill3" src="img/skill_html.svg" alt="">
+                    <img class="skill3" src="img/skill_js.svg" alt="">
                     <img class="skill4" src="img/skill_gsap.png" alt="">
                     <img class="skill5" src="img/skill_figma.svg" alt="">
                     <img class="skill6" src="img/skill_jquery.svg" alt="">
@@ -118,6 +118,7 @@
             anticipatePin: 1
         });
 
+        // skill 아이콘 및 버튼 제어
         const skillAni = gsap.timeline({
             defaults: { duration: 0.8, ease: "power2.out" }
         });
@@ -156,6 +157,7 @@
         });
 
 
+        // 커리어 팝업 노출 js
         const showBtn = document.querySelector(".my-sec-id-button");
         const pop = document.querySelector(".my-sec-id-pop");
         const closeBtn = document.querySelector(".my-sec-id-pop .xi-close-circle");
