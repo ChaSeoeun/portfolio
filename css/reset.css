@@ -72,6 +72,7 @@
     font-family: 'pretendard';
     vertical-align: baseline;
     box-sizing: border-box;
+    cursor: default;
 }
 
 article,
@@ -115,7 +116,21 @@ table {
     border-spacing: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: uppercase;
+}
+
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+}
+
+.flex-area {
+    display: flex;
+    align-items: center;
 }

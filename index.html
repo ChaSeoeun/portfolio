@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/XEIcon-2.2.0/xeicon.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -30,19 +31,66 @@
                     <a href="tel:010.3337.6343">010.3337.6343</a>
                 </div> -->
                 <div class="my-sec-id-skill">
-                    <img class="skill1" src="img/skill_html.svg" alt="">
+                    <img class="skill1" src="img/skill_js.svg" alt="">
                     <img class="skill2" src="img/skill_css.svg" alt="">
-                    <img class="skill3" src="img/skill_js.svg" alt="">
-                    <img class="skill4" src="img/skill_jquery.svg" alt="">
+                    <img class="skill3" src="img/skill_html.svg" alt="">
+                    <img class="skill4" src="img/skill_gsap.png" alt="">
                     <img class="skill5" src="img/skill_figma.svg" alt="">
+                    <img class="skill6" src="img/skill_jquery.svg" alt="">
+                    <img class="skill7" src="img/skill_git.png" alt="">
                 </div>
-                <div class="my-sec-id-button">
+                <div class="my-sec-id-button portfolio-btn">
                     <a href="">SHOW MORE</a>
                 </div>
             </div>
 
             <div class="my-sec-id-pop">
-
+                <div class="black-bg"></div>
+                <div class="id-pop-cont">
+                    <i class="xi-close-circle"></i>
+                    <div class="self-intro">
+                        <p>차 서은</p>
+                        <p>1994.04.28</p>
+                        <a href="tel:010.3337.6343">010.3337.6343</a>
+                        <p>chaseoeunn@gmail.com</p>
+                    </div>
+                    <div class="career">
+                        <h3>career</h3>
+                        <div class="career-cont">
+                            <div class="flex-area">
+                                <p class="year">2023.10 ~</p>
+                                <div class="career-text">
+                                    <p>리틀팍스</p>
+                                    <p class="s-text"><span>개발2팀 대리</span> 웹 퍼블리싱</p>
+                                </div>
+                            </div>
+                            <div class="flex-area">
+                                <p class="year">2022.07 ~ 2023.09</p>
+                                <div class="career-text">
+                                    <p>나나성형외과</p>
+                                    <p class="s-text"><span>웹디자인팀</span> 웹 퍼블리싱</p>
+                                </div>
+                            </div>
+                            <div class="flex-area">
+                                <p class="year">2021.10 ~ 2022.04</p>
+                                <div class="career-text">
+                                    <p>렌탈프랜드, 올네고</p>
+                                    <p class="s-text"><span>연구개발팀 사원</span> 웹 퍼블리싱 / 웹개발 및 앱개발 컨택</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-area">
+                        <div class="portfolio-btn">
+                            <a target="_blank" href="https://github.com/ChaSeoeun">go to git</a>
+                        </div>
+                        <div class="portfolio-btn">
+                            <a target="_blank"
+                                href="https://ivory-pick-db4.notion.site/Cha-Seoeun-61aa2091133849bfaa7a821dde698df1?source=copy_link"
+                                class="notion-btn">go to notion</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -105,6 +153,25 @@
             el.addEventListener('mouseleave', () => {
                 gsap.to(el, { scale: 1, duration: 0.2, overwrite: 'auto' });
             });
+        });
+
+
+        const showBtn = document.querySelector(".my-sec-id-button");
+        const pop = document.querySelector(".my-sec-id-pop");
+        const closeBtn = document.querySelector(".my-sec-id-pop .xi-close-circle");
+
+        showBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            pop.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            pop.classList.remove("active");
+        });
+
+        const blackBg = document.querySelector(".my-sec-id-pop .black-bg");
+        blackBg.addEventListener("click", () => {
+            pop.classList.remove("active");
         });
     </script>
 
