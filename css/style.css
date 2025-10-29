@@ -29,6 +29,7 @@ section.up {
 
 .my-sec {
     width: 100%;
+    height: 100vh;
     background: #fff;
 }
 
@@ -228,4 +229,34 @@ section.up {
 
 .id-pop-cont .portfolio-btn a {
     text-transform: uppercase;
+}
+
+#portfolio {
+    width: 100%;
+}
+
+.pf-item {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#portfolio-cont1 {
+    background: #f0f0f0;
+}
+
+#portfolio-cont2 {
+    background: #e0e0e0;
+}
+
+#portfolio-cont3 {
+    background: #d0d0d0;
+}
+
+#portfolio-cont4 {
+    background: #c0c0c0;
 }

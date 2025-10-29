@@ -13,7 +13,7 @@
 
 <body onselectstart="return false" ondragstart="return false" oncontextmenu="return false">
     <main id="portfolio-cont">
-        <section id="intro" class="intro-sec up">
+        <section id="intro" class="intro-sec">
             <div class="intro-sec-text t1">믿고 맡길 수 있는</div>
             <div class="intro-sec-text t2">꾸준히 성장하는</div>
             <div class="intro-sec-text t3">트렌디에 맞게</div>
@@ -22,7 +22,7 @@
             <div class="intro-sec-text t6">차서은입니다</div>
         </section>
 
-        <section id="my" class="my-sec up">
+        <section id="my" class="my-sec">
             <div class="my-sec-id-pic">
                 <img src="img/id_picture.png" alt="">
                 <!-- <div class="my-sec-id-text">
@@ -93,6 +93,21 @@
                 </div>
             </div>
         </section>
+
+        <div id="portfolio">
+            <section id="portfolio-cont1" class="pf-item">
+                section 01
+            </section>
+            <section id="portfolio-cont2" class="pf-item">
+                section 02
+            </section>
+            <section id="portfolio-cont3" class="pf-item">
+                section 03
+            </section>
+            <section id="portfolio-cont4" class="pf-item">
+                section 04
+            </section>
+        </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -140,7 +155,7 @@
             animation: skillAni,
             trigger: "#my",
             start: "top top",
-            end: "+=4000",
+            end: "+=3000",
             scrub: true,
             pin: true,
             anticipatePin: 1
@@ -174,6 +189,19 @@
         const blackBg = document.querySelector(".my-sec-id-pop .black-bg");
         blackBg.addEventListener("click", () => {
             pop.classList.remove("active");
+        });
+
+
+        let panels = gsap.utils.toArray(".pf-item");
+        let tops = panels.map(panel => ScrollTrigger.create({ trigger: panel, start: "top top" }));
+
+        panels.forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top top",
+                pin: true,
+                pinSpacing: false
+            })
         });
     </script>
 
